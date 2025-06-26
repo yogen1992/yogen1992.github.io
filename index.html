@@ -199,6 +199,43 @@
         </p>
         <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
       </div>
+      <script>
+  const modelSlides = [
+    {
+      title: "Interseismic Model",
+      desc: "Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.",
+      img: "interseismic.jpg"
+    },
+    {
+      title: "Coseismic Model",
+      desc: "Joint InSAR and GNSS analysis during the Dapu earthquake identifies peak slip of ~40 cm on a steeply east-dipping fault at ~12 km depth.",
+      img: "coseismic.jpg"
+    },
+    {
+      title: "Splay-Fault Geometry",
+      desc: "The data suggest activation of secondary west-dipping splay faults, indicating complex fault interactions in a conjugate system.",
+      img: "splay_fault.jpg"
+    },
+    {
+      title: "Aftershock Distribution",
+      desc: "Dense aftershock patterns illuminate fault planes and help validate the mainshock rupture geometry through spatial correlation with modeled slip zones.",
+      img: "aftershocks.jpg"
+    },
+    {
+      title: "Coulomb Stress Change",
+      desc: "Coulomb stress modeling reveals positive stress changes on adjacent fault segments, pointing to elevated future seismic hazard in the region.",
+      img: "coulomb.jpg"
+    }
+  ];
+
+  let current = 0;
+  setInterval(() => {
+    current = (current + 1) % modelSlides.length;
+    document.getElementById("model-title").textContent = modelSlides[current].title;
+    document.getElementById("model-desc").textContent = modelSlides[current].desc;
+    document.getElementById("model-image").src = modelSlides[current].img;
+  }, 15000);
+</script>
     </div>
   </div>
 </body>
