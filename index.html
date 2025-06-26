@@ -80,12 +80,6 @@
       padding-bottom: 5px;
     }
 
-    h3 {
-      font-size: 1.2em;
-      color: #ffffff;
-      margin: 10px 0 5px;
-    }
-
     p, li {
       font-size: 1.05em;
       font-weight: normal;
@@ -106,26 +100,22 @@
       padding-left: 20px;
     }
 
-    .highlight-paper img,
-    #model-slide img {
+    .highlight-paper img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
     }
 
-    .highlight-paper p,
-    #model-slide p {
-      color: #ddd;
-      font-size: 0.95em;
+    .highlight-paper h3 {
+      font-size: 1.2em;
+      color: #ffffff;
+      margin: 10px 0 5px;
     }
 
-    #model-slide {
-      margin-top: 30px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 20px;
-      backdrop-filter: blur(5px);
+    .highlight-paper p {
+      color: #ddd;
+      font-size: 0.95em;
     }
   </style>
 </head>
@@ -189,7 +179,45 @@
         <p>Linkedin: — <a href="https://www.linkedin.com/in/yogendra-sharma-60b880139" target="_blank">[Link]</a></p>
         <p>Google Scholar: — <a href="https://scholar.google.co.in/citations?user=rdurS_UAAAAJ&hl=en" target="_blank">[Link]</a></p>
 
-        <!-- Highlighted Paper Section -->
+        <!-- Model Highlights Section -->
+        <section style="padding: 40px; background-color: rgba(255, 255, 255, 0.05); border-radius: 12px; backdrop-filter: blur(4px); margin-top: 40px;">
+          <h2 style="color: #ffd580; border-bottom: 1px solid #999; padding-bottom: 10px;">Model Highlights</h2>
+
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: #ffcc66;">Interseismic Model</h3>
+            <img src="interseismic.jpg" alt="Interseismic Model" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 10px;">
+            <p>Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: #ffcc66;">Coseismic Model</h3>
+            <img src="coseismic.jpg" alt="Coseismic Model" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 10px;">
+            <p>Joint InSAR and GNSS analysis during the Dapu earthquake identifies peak slip of ~40 cm on a steeply east-dipping fault at ~12 km depth.</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: #ffcc66;">Splay-Fault Geometry</h3>
+            <img src="splay_fault.jpg" alt="Splay-Fault Geometry" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 10px;">
+            <p>The data suggest activation of secondary west-dipping splay faults, indicating complex fault interactions in a conjugate system.</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: #ffcc66;">Aftershock Distribution</h3>
+            <img src="aftershocks.jpg" alt="Aftershock Distribution" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 10px;">
+            <p>Dense aftershock patterns illuminate fault planes and help validate the mainshock rupture geometry through spatial correlation with modeled slip zones.</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3 style="color: #ffcc66;">Coulomb Stress Change</h3>
+            <img src="coulomb.jpg" alt="Coulomb Stress Change" style="width: 100%; max-width: 600px; border-radius: 8px; margin-bottom: 10px;">
+            <p>Coulomb stress modeling reveals positive stress changes on adjacent fault segments, pointing to elevated future seismic hazard in the region.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar: Highlighted Paper -->
+      <div class="highlight-paper">
         <h2>Recent Highlight</h2>
         <img src="combined_insar_tec.jpg" alt="Figure from Dapu earthquake paper" />
         <h3>2025 Dapu Earthquake Source Model</h3>
@@ -197,73 +225,8 @@
           The 2025 Mw ~6.1 Dapu earthquake in southwestern Taiwan provides new insights into the long-debated thin- vs. thick-skinned tectonics of the region. Joint GNSS–InSAR modeling and aftershock analysis reveal a dominant east-dipping reverse fault with ~40 cm of peak slip near 12 km depth. The seismic moment (1.49×10²⁵ dyne-cm) corresponds to Mw 6.08. The event likely activated both east- and west-dipping faults, highlighting a complex conjugate fault system beneath the fold-and-thrust belt. These findings indicate that basement-involved thick-skinned deformation plays a key role beneath the traditional thin-skinned décollement. Coulomb stress modeling further suggests increased stress near locked segments, pointing to the importance of continued geophysical monitoring for future hazard assessment.
         </p>
         <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
-
-        <!-- Model Slideshow Section (Placed Below Highlight) -->
-        <div id="model-slide">
-          <h2>Model Insights</h2>
-          <img id="model-image" src="interseismic.jpg" alt="Model Figure" />
-          <h3 id="model-title">Interseismic Model</h3>
-          <p id="model-desc">
-            Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Sidebar (if needed in future) -->
-      <div class="highlight-paper">
-        <h2>Sidebar Placeholder</h2>
-        <p>You may add additional sidebar content here.</p>
       </div>
     </div>
   </div>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJPLPZ6NPS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NJPLPZ6NPS');
-  </script>
-
-  <!-- Slideshow Script -->
-  <script>
-    const modelSlides = [
-      {
-        title: "Interseismic Model",
-        desc: "Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.",
-        img: "interseismic.jpg"
-      },
-      {
-        title: "Coseismic Model",
-        desc: "Joint InSAR and GNSS analysis during the Dapu earthquake identifies peak slip of ~40 cm on a steeply east-dipping fault at ~12 km depth.",
-        img: "coseismic.jpg"
-      },
-      {
-        title: "Splay-Fault Geometry",
-        desc: "The data suggest activation of secondary west-dipping splay faults, indicating complex fault interactions in a conjugate system.",
-        img: "splay_fault.jpg"
-      },
-      {
-        title: "Aftershock Distribution",
-        desc: "Dense aftershock patterns illuminate fault planes and help validate the mainshock rupture geometry through spatial correlation with modeled slip zones.",
-        img: "aftershocks.jpg"
-      },
-      {
-        title: "Coulomb Stress Change",
-        desc: "Coulomb stress modeling reveals positive stress changes on adjacent fault segments, pointing to elevated future seismic hazard in the region.",
-        img: "coulomb.jpg"
-      }
-    ];
-
-    let current = 0;
-    setInterval(() => {
-      current = (current + 1) % modelSlides.length;
-      document.getElementById("model-title").textContent = modelSlides[current].title;
-      document.getElementById("model-desc").textContent = modelSlides[current].desc;
-      document.getElementById("model-image").src = modelSlides[current].img;
-    }, 15000);
-  </script>
 </body>
 </html>
