@@ -1,91 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dr. Yogendra Sharma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    @font-face {
+      font-family: 'Cambria';
+      src: local('Cambria'), local('Cambria Regular');
+    }
+
     body {
+      font-family: 'Cambria', serif;
       margin: 0;
-      font-family: sans-serif;
       background-image: url('background.jpg');
       background-size: cover;
       background-position: center;
-      color: #ffffff;
-      backdrop-filter: brightness(0.8);
+      background-attachment: fixed;
+      color: #f2f2f2;
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px 20px;
       min-height: 100vh;
-      padding: 40px;
     }
 
-    .container {
-      max-width: 900px;
+    .main-layout {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
       margin: auto;
-      background: rgba(0, 0, 0, 0.5);
+      gap: 30px;
+    }
+
+    .main-content {
+      flex: 2;
+      min-width: 300px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       padding: 30px;
+      backdrop-filter: blur(5px);
     }
 
-    img.profile {
+    .highlight-paper {
+      flex: 1;
+      min-width: 280px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       border: 3px solid #ccc;
-      margin-bottom: 20px;
+      object-fit: cover;
     }
 
     h1 {
-      margin-top: 0;
       font-size: 2.2em;
+      font-weight: bold;
+      color: #ffcc66;
+      margin: 10px 0 5px;
     }
 
     h2 {
-      color: #ffcc66;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ffd580;
       margin-top: 30px;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      font-size: 1.05em;
+      font-weight: normal;
+      line-height: 1.6em;
+      color: #e0e0e0;
     }
 
     a {
-      color: #66ccff;
+      color: #80dfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight-paper img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+    }
+
+    .highlight-paper h3 {
+      font-size: 1.2em;
+      color: #ffffff;
+      margin: 10px 0 5px;
+    }
+
+    .highlight-paper p {
+      color: #ddd;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <div class="container" align="center">
-      <img src="profile.jpg" alt="Dr. Yogendra Sharma" class="profile">
-      <h1>Dr. Yogendra Sharma</h1>
-      <p><strong>Seismic Hazard • GNSS & InSAR • Earthquake Modeling • AI & Bayesian Inversion</strong></p>
+    <div class="main-layout">
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="profile">
+          <img src="profile.jpg" alt="Dr. Yogendra Sharma" />
+          <h1>Dr. Yogendra Sharma</h1>
+          <p><strong>Seismic Hazard • GNSS & InSAR • Earthquake Modeling • AI & Bayesian Inversion</strong></p>
+        </div>
 
-      <h2>About Me</h2>
-      <p>
-        I am a postdoctoral researcher at NCKU working on crustal deformation, fault slip inversion, and seismic hazard assessment 
-        in seismically active regions like the Himalayas, Taiwan, and the Philippines. I integrate GNSS and InSAR observations with 
-        Bayesian and AI-based modeling techniques to better understand interseismic processes and long-term fault behavior.
-      </p>
+        <h2>About Me</h2>
+        <p>
+          I am a postdoctoral researcher at NCKU specializing in crustal deformation, interseismic fault slip modeling,
+          and seismic hazard assessment. My research focuses on tectonically active zones such as the Himalayas,
+          Taiwan, and the Philippines. I integrate GNSS, InSAR, and advanced Bayesian and AI/ML techniques to
+          constrain fault kinematics and understand long-term earthquake behavior.
+        </p>
 
-      <h2>Research Interests</h2>
-      <p>Geodesy, Earthquake Physics, Fault Mechanics, Machine Learning in Earth Sciences, Probabilistic Hazard Modeling</p>
+        <h2>Research Interests</h2>
+        <p>
+          <strong>Geodesy</strong>, Earthquake Physics, Fault Mechanics, Interseismic Modeling, Machine Learning in Geosciences,
+          Probabilistic Inversion, Active Tectonics
+        </p>
 
-<h2>Selected Publications</h2>
-<ul>
-  <li>   Sharma Y. et al. (2020), Spatial distribution of earthquake potential along the Himalayan arc — <a href="https://doi.org/10.1016/j.tecto.2020.228556" target="_blank">[DOI]</a>  </li>
-  <li>   Sharma Y. et al. (2023), Interseismic slip rate and fault geometry along the northwest Himalaya — <a href="https://doi.org/10.1093/gji/ggad384" target="_blank">[DOI]</a>  </li>
-  <li>   Sharma Y. et al. (2024), Kinematics of crustal deformation along the central Himalaya —   <a href="https://doi.org/10.1007/s11600-023-01175-5" target="_blank">[DOI]</a>  </li>
-  <li>   Sharma Y. et al. (2025), Fast report: Coseismic source model of the January 2025 Mw 6.1 Dapu earthquake from geodetic data and its implications for seismogenic structures in Southwestern Taiwan — <a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">[DOI]</a>   </li>
-</ul>
+        <h2>Selected Publications</h2>
+        <ul>
+          <li>
+            Sharma Y. et al. (2020), Spatial distribution of earthquake potential along the Himalayan arc — 
+            <a href="https://doi.org/10.1016/j.tecto.2020.228556" target="_blank">[DOI]</a>
+          </li>
+          <li>
+            Sharma Y. et al. (2023), Interseismic slip rate and fault geometry along the northwest Himalaya — 
+            <a href="https://doi.org/10.1093/gji/ggad384" target="_blank">[DOI]</a>
+          </li>
+          <li>
+            Sharma Y. et al. (2024), Kinematics of crustal deformation along the central Himalaya — 
+            <a href="https://doi.org/10.1007/s11600-023-01175-5" target="_blank">[DOI]</a>
+          </li>
+          <li>
+            Sharma Y. et al. (2025), Fast report: Coseismic source model of the January 2025 Mw 6.1 Dapu earthquake — 
+            <a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">[DOI]</a>
+          </li>
+        </ul>
 
-      <h2>Code & Data</h2>
-      <p>GitHub: <a href="https://github.com/yogen1992" target="_blank">github.com/yogen1992</a></p>
+        <h2>Code & Data</h2>
+        <p>GitHub: <a href="https://github.com/yogen1992" target="_blank">github.com/yogen1992</a></p>
 
-      <h2>CV</h2>
-      <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+        <h2>CV</h2>
+        <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
 
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:yogenmaths2738@email.com">yogenmaths2738@email.com</a></p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yogendra@email.com">yogendra@email.com</a></p>
+      </div>
+
+      <!-- Sidebar: Highlighted Paper -->
+      <div class="highlight-paper">
+        <h2>Recent Highlight</h2>
+        <img src="dapu_fig.png" alt="Figure from Dapu earthquake paper" />
+        <h3>2025 Dapu Earthquake Source Model</h3>
+        <p>
+          Our latest study presents a geodetic inversion of the January 2025 Mw 6.1 Dapu earthquake in Taiwan,
+          revealing rupture complexity and its implications for active structures in the southwest.
+        </p>
+        <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
+      </div>
     </div>
   </div>
 </body>
