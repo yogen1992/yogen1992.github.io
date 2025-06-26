@@ -117,6 +117,42 @@
       color: #ddd;
       font-size: 0.95em;
     }
+
+    .model-carousel {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .carousel-content {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      display: none;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 12px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -189,8 +225,67 @@
           The 2025 Mw ~6.1 Dapu earthquake in southwestern Taiwan provides new insights into the long-debated thin- vs. thick-skinned tectonics of the region. Joint GNSS–InSAR modeling and aftershock analysis reveal a dominant east-dipping reverse fault with ~40 cm of peak slip near 12 km depth. The seismic moment (1.49×10²⁵ dyne-cm) corresponds to Mw 6.08. The event likely activated both east- and west-dipping faults, highlighting a complex conjugate fault system beneath the fold-and-thrust belt. These findings indicate that basement-involved thick-skinned deformation plays a key role beneath the traditional thin-skinned décollement. Coulomb stress modeling further suggests increased stress near locked segments, pointing to the importance of continued geophysical monitoring for future hazard assessment.
         </p>
         <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
+
+        <!-- Auto-Sliding Research Models -->
+        <div class="model-carousel">
+          <h2>Research Models</h2>
+          <div class="carousel-content" id="carousel">
+            <div class="carousel-item active">
+              <h3>Interseismic Model</h3>
+              <img src="interseismic.jpg" alt="Interseismic Model">
+              <p>Characterizes interseismic fault locking using GNSS and InSAR. Bayesian inversion constrains slip deficit on the Main Himalayan Thrust.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Coseismic Model</h3>
+              <img src="coseismic.jpg" alt="Coseismic Model">
+              <p>Reconstructs coseismic displacement fields from GNSS and InSAR. Used to derive fault slip distribution post-earthquake.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Splay Fault Model</h3>
+              <img src="splay_fault.jpg" alt="Splay Fault Model">
+              <p>Shallow fault branching and strain partitioning evaluated using high-resolution deformation and structural mapping.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Strain Rate Model</h3>
+              <img src="strain_rate.jpg" alt="Strain Rate Model">
+              <p>Derived from GNSS velocity gradients to reveal regions with high seismic strain accumulation.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>2D Fault Geometry</h3>
+              <img src="2d_fault.jpg" alt="2D Fault Geometry">
+              <p>Dislocation modeling reveals 2D geometry of subsurface fault structures including ramps and flats.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Velocity Inversion</h3>
+              <img src="gnss_insar.jpg" alt="Velocity Inversion">
+              <p>Combines GNSS and InSAR to recover surface velocity fields, used for interseismic inversion modeling.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Thick-Skinned Model</h3>
+              <img src="thick_skinned.jpg" alt="Thick-Skinned Model">
+              <p>Highlights the role of basement-involved tectonics in crustal shortening beneath thin-skinned thrusts.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Coseismic + Locking</h3>
+              <img src="coseismic_locking.jpg" alt="Coseismic + Locking Model">
+              <p>Integrates slip from past earthquakes with locked areas to improve long-term seismic hazard forecasts.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- JavaScript for Auto-Switching -->
+  <script>
+    const items = document.querySelectorAll('.carousel-item');
+    let current = 0;
+    function showNextItem() {
+      items[current].classList.remove('active');
+      current = (current + 1) % items.length;
+      items[current].classList.add('active');
+    }
+    setInterval(showNextItem, 5000); // Change slide every 5 seconds
+  </script>
 </body>
 </html>
