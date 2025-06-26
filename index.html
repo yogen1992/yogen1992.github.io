@@ -80,6 +80,12 @@
       padding-bottom: 5px;
     }
 
+    h3 {
+      font-size: 1.2em;
+      color: #ffffff;
+      margin: 10px 0 5px;
+    }
+
     p, li {
       font-size: 1.05em;
       font-weight: normal;
@@ -105,12 +111,6 @@
       border-radius: 8px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
-    }
-
-    .highlight-paper h3 {
-      font-size: 1.2em;
-      color: #ffffff;
-      margin: 10px 0 5px;
     }
 
     .highlight-paper p {
@@ -179,15 +179,7 @@
         <p>Linkedin: — <a href="https://www.linkedin.com/in/yogendra-sharma-60b880139" target="_blank">[Link]</a></p>
         <p>Google Scholar: — <a href="https://scholar.google.co.in/citations?user=rdurS_UAAAAJ&hl=en" target="_blank">[Link]</a></p>
       </div>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJPLPZ6NPS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-NJPLPZ6NPS');
-</script>
       <!-- Sidebar: Highlighted Paper -->
       <div class="highlight-paper">
         <h2>Recent Highlight</h2>
@@ -195,48 +187,71 @@
         <h3>2025 Dapu Earthquake Source Model</h3>
         <p>
           The 2025 Mw ~6.1 Dapu earthquake in southwestern Taiwan provides new insights into the long-debated thin- vs. thick-skinned tectonics of the region. Joint GNSS–InSAR modeling and aftershock analysis reveal a dominant east-dipping reverse fault with ~40 cm of peak slip near 12 km depth. The seismic moment (1.49×10²⁵ dyne-cm) corresponds to Mw 6.08. The event likely activated both east- and west-dipping faults, highlighting a complex conjugate fault system beneath the fold-and-thrust belt. These findings indicate that basement-involved thick-skinned deformation plays a key role beneath the traditional thin-skinned décollement. Coulomb stress modeling further suggests increased stress near locked segments, pointing to the importance of continued geophysical monitoring for future hazard assessment.
-
         </p>
         <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
       </div>
-      <script>
-  const modelSlides = [
-    {
-      title: "Interseismic Model",
-      desc: "Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.",
-      img: "interseismic.jpg"
-    },
-    {
-      title: "Coseismic Model",
-      desc: "Joint InSAR and GNSS analysis during the Dapu earthquake identifies peak slip of ~40 cm on a steeply east-dipping fault at ~12 km depth.",
-      img: "coseismic.jpg"
-    },
-    {
-      title: "Splay-Fault Geometry",
-      desc: "The data suggest activation of secondary west-dipping splay faults, indicating complex fault interactions in a conjugate system.",
-      img: "splay_fault.jpg"
-    },
-    {
-      title: "Aftershock Distribution",
-      desc: "Dense aftershock patterns illuminate fault planes and help validate the mainshock rupture geometry through spatial correlation with modeled slip zones.",
-      img: "aftershocks.jpg"
-    },
-    {
-      title: "Coulomb Stress Change",
-      desc: "Coulomb stress modeling reveals positive stress changes on adjacent fault segments, pointing to elevated future seismic hazard in the region.",
-      img: "coulomb.jpg"
-    }
-  ];
 
-  let current = 0;
-  setInterval(() => {
-    current = (current + 1) % modelSlides.length;
-    document.getElementById("model-title").textContent = modelSlides[current].title;
-    document.getElementById("model-desc").textContent = modelSlides[current].desc;
-    document.getElementById("model-image").src = modelSlides[current].img;
-  }, 15000);
-</script>
+      <!-- Sidebar: Rotating Model Descriptions -->
+      <div class="highlight-paper">
+        <h2>Model Insights</h2>
+        <div id="model-slide">
+          <img id="model-image" src="interseismic.jpg" alt="Model Figure" style="width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 12px;">
+          <h3 id="model-title">Interseismic Model</h3>
+          <p id="model-desc">
+            Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJPLPZ6NPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NJPLPZ6NPS');
+  </script>
+
+  <!-- Rotating Model Script -->
+  <script>
+    const modelSlides = [
+      {
+        title: "Interseismic Model",
+        desc: "Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.",
+        img: "interseismic.jpg"
+      },
+      {
+        title: "Coseismic Model",
+        desc: "Joint InSAR and GNSS analysis during the Dapu earthquake identifies peak slip of ~40 cm on a steeply east-dipping fault at ~12 km depth.",
+        img: "coseismic.jpg"
+      },
+      {
+        title: "Splay-Fault Geometry",
+        desc: "The data suggest activation of secondary west-dipping splay faults, indicating complex fault interactions in a conjugate system.",
+        img: "splay_fault.jpg"
+      },
+      {
+        title: "Aftershock Distribution",
+        desc: "Dense aftershock patterns illuminate fault planes and help validate the mainshock rupture geometry through spatial correlation with modeled slip zones.",
+        img: "aftershocks.jpg"
+      },
+      {
+        title: "Coulomb Stress Change",
+        desc: "Coulomb stress modeling reveals positive stress changes on adjacent fault segments, pointing to elevated future seismic hazard in the region.",
+        img: "coulomb.jpg"
+      }
+    ];
+
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % modelSlides.length;
+      document.getElementById("model-title").textContent = modelSlides[current].title;
+      document.getElementById("model-desc").textContent = modelSlides[current].desc;
+      document.getElementById("model-image").src = modelSlides[current].img;
+    }, 15000);
+  </script>
 </body>
 </html>
