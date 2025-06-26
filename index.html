@@ -106,16 +106,26 @@
       padding-left: 20px;
     }
 
-    .highlight-paper img {
+    .highlight-paper img,
+    #model-slide img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 12px;
       border: 1px solid #ccc;
     }
 
-    .highlight-paper p {
+    .highlight-paper p,
+    #model-slide p {
       color: #ddd;
       font-size: 0.95em;
+    }
+
+    #model-slide {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(5px);
     }
   </style>
 </head>
@@ -178,10 +188,8 @@
         <p>Researchgate: — <a href="https://www.researchgate.net/profile/Yogendra-Sharma?ev=hdr_xprf" target="_blank">[Link]</a></p>
         <p>Linkedin: — <a href="https://www.linkedin.com/in/yogendra-sharma-60b880139" target="_blank">[Link]</a></p>
         <p>Google Scholar: — <a href="https://scholar.google.co.in/citations?user=rdurS_UAAAAJ&hl=en" target="_blank">[Link]</a></p>
-      </div>
 
-      <!-- Sidebar: Highlighted Paper -->
-      <div class="highlight-paper">
+        <!-- Highlighted Paper Section -->
         <h2>Recent Highlight</h2>
         <img src="combined_insar_tec.jpg" alt="Figure from Dapu earthquake paper" />
         <h3>2025 Dapu Earthquake Source Model</h3>
@@ -189,20 +197,24 @@
           The 2025 Mw ~6.1 Dapu earthquake in southwestern Taiwan provides new insights into the long-debated thin- vs. thick-skinned tectonics of the region. Joint GNSS–InSAR modeling and aftershock analysis reveal a dominant east-dipping reverse fault with ~40 cm of peak slip near 12 km depth. The seismic moment (1.49×10²⁵ dyne-cm) corresponds to Mw 6.08. The event likely activated both east- and west-dipping faults, highlighting a complex conjugate fault system beneath the fold-and-thrust belt. These findings indicate that basement-involved thick-skinned deformation plays a key role beneath the traditional thin-skinned décollement. Coulomb stress modeling further suggests increased stress near locked segments, pointing to the importance of continued geophysical monitoring for future hazard assessment.
         </p>
         <p><a href="https://doi.org/10.1007/s44195-025-00100-1" target="_blank">View DOI →</a></p>
-      </div>
 
-      <!-- Sidebar: Rotating Model Descriptions -->
-      <div class="highlight-paper">
-        <h2>Model Insights</h2>
+        <!-- Model Slideshow Section (Placed Below Highlight) -->
         <div id="model-slide">
-          <img id="model-image" src="interseismic.jpg" alt="Model Figure" style="width: 100%; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 12px;">
+          <h2>Model Insights</h2>
+          <img id="model-image" src="interseismic.jpg" alt="Model Figure" />
           <h3 id="model-title">Interseismic Model</h3>
           <p id="model-desc">
             Bayesian inversion of GNSS velocities reveals partial locking at 15–17 km depth, indicating aseismic creep near the surface and locked behavior at seismogenic depths.
           </p>
         </div>
+
       </div>
 
+      <!-- Sidebar (if needed in future) -->
+      <div class="highlight-paper">
+        <h2>Sidebar Placeholder</h2>
+        <p>You may add additional sidebar content here.</p>
+      </div>
     </div>
   </div>
 
@@ -215,7 +227,7 @@
     gtag('config', 'G-NJPLPZ6NPS');
   </script>
 
-  <!-- Rotating Model Script -->
+  <!-- Slideshow Script -->
   <script>
     const modelSlides = [
       {
